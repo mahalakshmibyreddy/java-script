@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <h1>PERCENTAGE & GRADE CALCULATOR</h1>
+    <h2>Maximum marks:<input type="text"id="mm"></h2>
+    <h2>Obtained marks:<input type="text" id="ob"></h2>
+    <button type="button" onclick="pg()">Submit</button>
+    <h2>Percentage:<input type="text" id="per"></h2>
+    <h2>Grade:<input type="text" id="gr"></h2>
+    <script>
+        function pg()
+        {
+            document.getElementById("per").value=document.getElementById("ob").value/document.getElementById("mm").value*100;
+            var Percentage=document.getElementById("per").value;
+            var g;
+            switch(Math.floor(Percentage/10))
+            {
+                case 9:
+
+                case 8: g="Outstanding";
+                        break;
+
+                case 7: g="Distinction";
+                        break;
+
+                case 6: g="Good";
+                        break;
+                
+                case 5: g="Average";
+                        break;
+
+                case 4: g="pass";
+                        break;
+
+                default: g="Fail";
+            }
+            document.getElementById("gr").value=g;
+        }
+        
+    </script>
+</body>
+</html>
